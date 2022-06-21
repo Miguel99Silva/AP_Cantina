@@ -1,4 +1,30 @@
 /* Body */
+@media screen and (max-width:1000px) {
+  section, aside {
+    width: 1000px;
+
+  }
+
+}
+
+@media screen and (max-width:768px) {
+  section, aside {
+    width: 700px;
+
+  }
+
+}
+
+
+
+
+@media screen and (max-width:600px) {
+  section, aside {
+    width: 580px;
+
+  }
+
+}
 body{
   background-color: lightgray;
 font-family:cursive;
