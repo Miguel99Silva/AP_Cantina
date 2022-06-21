@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="style.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+    .btnmarcarpopup {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      background-color: #005288;
+      font-size: 10px;
+
+    }
+
+    /* The actual popup */
+    .btnmarcarpopup .popuptext {
+      visibility: hidden;
+      width: 160px;
+      background-color: #555;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 8px 0;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      margin-left: -80px;
+    }
+
+    /* Add animation (fade in the popup) */
+    @-webkit-keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+
+
+
+  </style>
+
+
+</head>
+
+
+
+
+<body>
+  <div class="col-sm-6 logo">
+    <a href="cantina.html"><img src="imagens/logo.png"></a>
+    <br>
+    </br>
+  </div>
+
+
+
+
+  <div class="container-fluid">
+
+    <div class=" col-sm-12 row">
+
+      <!-- Dias das semanas -->
+      <div class="col-sm-4 Dsemanas">
+        <h4> Segunda-Feira</h4>
+        <br></br>
+        <br></br>
+        <p></p>
+        <h4>Terça-Feira</h4>
+        <br></br>
+        <br></br>
+        <p></p>
+        <h4> Quarta-Feira</h4>
+        <br></br>
+        <br></br>
+        <p></p>
+        <h4> Quinta-Feira</h4>
+        <br></br>
+        <br></br>
+        <p></p>
+        <h4> Sexta-Feira</h4>
+        <br></br>
+        <br></br>
+      </div>
+
+      <!--Ementa -->
+
+      <div class="col-sm-6 Comida">
+        <div class="col-sm-12 Segunda">
+          <p>Frango assado com arroz e ervilhas vegeasdasdadasdsadads</p>
+          <p> Frango assado com arroz e ervilhas vegetssdadsaasdadasdadas</p>
+          <p> Frango assado com arroz e ervilhas vegedasdasdadsas</p>
+          -------------------------------------------------------------------------------
+          <div class="col-sm-12 Terca">
+            <p>Frango assado com arroz e ervilhas vegeasdasdadasdsadads</p>
+            <p> Frango assado com arroz e ervilhas vegetssdadsaasdadasdadas</p>
+            <p> Frango assado com arroz e ervilhas vegedasdasdadsas</p>
+
+            -------------------------------------------------------------------------------
+          </div>
+
+          <div class="col-sm-12 Quarta">
+            <p>Frango assado com arroz e ervilhas vegeasdasdadasdsadads</p>
+            <p> Frango assado com arroz e ervilhas vegetssdadsaasdadasdadas</p>
+            <p> Frango assado com arroz e ervilhas vegedasdasdadsas</p>
+
+            -------------------------------------------------------------------------------
+          </div>
+
+          <div class="col-sm-12 Quinta ">
+            <p>Frango assado com arroz e ervilhas vegeasdasdadasdsadads</p>
+            <p> Frango assado com arroz e ervilhas vegetssdadsaasdadasdadas</p>
+            <p> Frango assado com arroz e ervilhas vegedasdasdadsas</p>
+
+            ------------------------------------------------------------------------------
+          </div>
+
+          <div class="col-sm-12 Sexta">
+            <p>Frango assado com arroz e ervilhas vegeasdasdadasdsadads</p>
+            <p> Frango assado com arroz e ervilhas vegetssdadsaasdadasdadas</p>
+            <p> Frango assado com arroz e ervilhas vegedasdasdadsas</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="modal" id="signupModal" role="dialog" aria-labelledby="textopop" aria-hidden="true">
+
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!-- Modal root -->
+            <div class="m-header">
+
+              <button class="close" data-dismiss="modal">
+                      x
+              </button>
+
+              <h5 class="textopop"> Refeição marcada </h5>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Botões -->
+
+        <div class=" col-sm-1 buttons">
+          <div class="col-sm-1 Bmarcarsegunda">
+            <button class="btn btnmarcarpopup " type="button" name="marcar" value="1" value2="disabled"><a href="#signupModal" data-toggle="modal">
+                Marcar</a>
+              <span class="popuptext" id="myPopup"> Refeição Marcada!</span></button>
+
+            <p></p>
+
+            <div class="col-sm-1 Bmarcarsegunda">
+              <button class="btn btnmarcarpopup " type="button" name="marcar2" value="1" value2="disabled"><a href="#signupModal" data-toggle="modal">
+                  Marcar</a>
+                <span class="popuptext" id="myPopup"> Refeição Marcada!</span></button>
+            <p></p>
+            <div class="col-sm-1 Bmarcarsegunda">
+              <button class="btn btnmarcarpopup " type="button" name="marcar3" value="1" value2="disabled"><a href="#signupModal" data-toggle="modal">
+                  Marcar</a>
+                <span class="popuptext" id="myPopup"> Refeição Marcada!</span></button>
+            <br></br>
+            <br></br>
+            <p></p>
+            <p></p>
+          </div>
+
+          <div class="col-sm-1 Bmarcarterca">
+            <button class="btn btnmarcarpopup " type="button" name="marcar4" value="1" value2="disabled"><a href="#signupModal" data-toggle="modal">
+                Marcar</a>
+              <span class="popuptext" id="myPopup"> Refeição Marcada!</span></button>
+            <p></p>
+            <button class="btn btnmarcarpopup " type="button" name="marcar5" value="1" value2="disabled"><a href="#signupModal" data-toggle="modal">
+                Marcar</a>
+              <span class="popuptext" id="myPopup"> Refeição Marcada!</span></button>
+            <p></p>
+            <button class="btn btnmarcarpopup " type="button" name="marcar6" value="1" value2="disabled"><a href="#signupModal" data-toggle="modal">
+                Marcar</a>
+              <span class="popuptext" id="myPopup"> Refeição Marcada!</span></button>
+            <br></br>
+            <br></br>
+            <p></p>
+            <p></p>
+          </div>
+
+          <div class="col-sm-1 Bmarcarquarta">
+            <button class="btn btnmarcarpopup " type="button" name="marcar7" value="1" value2="disabled"><a href="#signupModal" data-toggle="modal">
+                Marcar</a>
+              <span class="popuptext" id="myPopup"> Refeição Marcada!</span></button>
+            <p></p>
+            <button class="btn btnmarcarpopup " type="button" name="marcar8" value="1" value2="disabled"><a href="#signupModal" data-toggle="modal">
+                Marcar</a>
+              <span class="popuptext" id="myPopup"> Refeição Marcada!</span></button>
+            <p></p>
+            <button class="btn btnmarcarpopup " type="button" name="marcar9" value="1" value2="disabled"><a href="#signupModal" data-toggle="modal">
+                Marcar</a>
+              <span class="popuptext" id="myPopup"> Refeição Marcada!</span></button>
+            <br></br>
+            <br></br>
+            <p></p>
+            <p></p>
+
+
+          </div>
+
+          <div class="col-sm-1 Bmarcarquinta">
+            <button class="btn btnmarcarpopup " type="button" name="marcar10" value="1" value2="disabled"><a href="#signupModal" data-toggle="modal">
+                Marcar</a>
+              <span class="popuptext" id="myPopup"> Refeição Marcada!</span></button>
+            <p></p>
+            <button class="btn btnmarcarpopup " type="button" name="marcar11" value="1" value2="disabled"><a href="#signupModal" data-toggle="modal">
+                Marcar</a>
+              <span class="popuptext" id="myPopup"> Refeição Marcada!</span></button>
+            <p></p>
+            <button class="btn btnmarcarpopup " type="button" name="marcar12" value="1" value2="disabled"><a href="#signupModal" data-toggle="modal">
+                Marcar</a>
+              <span class="popuptext" id="myPopup"> Refeição Marcada!</span></button>
+            <br></br>
+            <br></br>
+            <p></p>
+            <p></p>
+
+          </div>
+
+          <div class="col-sm-1 Bmarcarsexta">
+            <button class="btn btnmarcarpopup " type="button" name="marcar13" value="1" value2="disabled"><a href="#signupModal" data-toggle="modal">
+                Marcar</a>
+              <span class="popuptext" id="myPopup"> Refeição Marcada!</span></button>
+            <p></p>
+            <button class="btn btnmarcarpopup " type="button" name="marcar14" value="1" value2="disabled"><a href="#signupModal" data-toggle="modal">
+                Marcar</a>
+              <span class="popuptext" id="myPopup"> Refeição Marcada!</span></button>
+            <p></p>
+            <button class="btn btnmarcarpopup " type="button" name="marcar15" value="1" value2="disabled"><a href="#signupModal" data-toggle="modal">
+                Marcar</a>
+              <span class="popuptext" id="myPopup"> Refeição Marcada!</span></button>
+            <br></br>
+            <br></br>
+            <p></p>
+            <p></p>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <!-- Optional JavaScript; choose one of the two!
+
+  <!--Option 1: Bootstrap Bundle with Popper-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+
+    <script>
+      function myFunction() {
+        var popup = document.getElementById("myPopup");
+        popup.classList.toggle("show");
+      }
+
+      document.getElementsByName("marcar")[0].addEventListener("click", function() {
+        document.getElementsByName("marcar3")[0].disabled = true;
+        document.getElementsByName("marcar2")[0].disabled = true;
+      });
+
+      document.getElementsByName("marcar2")[0].addEventListener("click", function() {
+        document.getElementsByName("marcar")[0].disabled = true;
+        document.getElementsByName("marcar3")[0].disabled = true;
+      });
+
+      document.getElementsByName("marcar3")[0].addEventListener("click", function() {
+        document.getElementsByName("marcar")[0].disabled = true;
+        document.getElementsByName("marcar2")[0].disabled = true;
+      });
+
+      document.getElementsByName("marcar4")[0].addEventListener("click", function() {
+        document.getElementsByName("marcar")[0].disabled = true;
+        document.getElementsByName("marcar2")[0].disabled = true;
+        document.getElementsByName("marcar3")[0].disabled = true;
+        document.getElementsByName("marcar5")[0].disabled = true;
+        document.getElementsByName("marcar6")[0].disabled = true;
+      });
+
+      document.getElementsByName("marcar5")[0].addEventListener("click", function() {
+        document.getElementsByName("marcar")[0].disabled = true;
+        document.getElementsByName("marcar2")[0].disabled = true;
+        document.getElementsByName("marcar3")[0].disabled = true;
+        document.getElementsByName("marcar4")[0].disabled = true
+        document.getElementsByName("marcar6")[0].disabled = true;
+      });
+
+      document.getElementsByName("marcar6")[0].addEventListener("click", function() {
+        document.getElementsByName("marcar")[0].disabled = true;
+        document.getElementsByName("marcar2")[0].disabled = true;
+        document.getElementsByName("marcar3")[0].disabled = true;
+        document.getElementsByName("marcar4")[0].disabled = true;
+        document.getElementsByName("marcar5")[0].disabled = true;
+      });
+
+      document.getElementsByName("marcar7")[0].addEventListener("click", function() {
+        document.getElementsByName("marcar")[0].disabled = true;
+        document.getElementsByName("marcar2")[0].disabled = true;
+        document.getElementsByName("marcar3")[0].disabled = true;
+        document.getElementsByName("marcar4")[0].disabled = true;
+        document.getElementsByName("marcar5")[0].disabled = true;
+        document.getElementsByName("marcar6")[0].disabled = true;
+        document.getElementsByName("marcar8")[0].disabled = true;
+        document.getElementsByName("marcar9")[0].disabled = true;
+      });
+
+      document.getElementsByName("marcar8")[0].addEventListener("click", function() {
+        document.getElementsByName("marcar")[0].disabled = true;
+        document.getElementsByName("marcar2")[0].disabled = true;
+        document.getElementsByName("marcar3")[0].disabled = true;
+        document.getElementsByName("marcar4")[0].disabled = true;
+        document.getElementsByName("marcar5")[0].disabled = true;
+        document.getElementsByName("marcar6")[0].disabled = true;
+        document.getElementsByName("marcar7")[0].disabled = true;
+        document.getElementsByName("marcar9")[0].disabled = true;
+      });
+
+      document.getElementsByName("marcar9")[0].addEventListener("click", function() {
+        document.getElementsByName("marcar")[0].disabled = true;
+        document.getElementsByName("marcar2")[0].disabled = true;
+        document.getElementsByName("marcar3")[0].disabled = true;
+        document.getElementsByName("marcar4")[0].disabled = true;
+        document.getElementsByName("marcar5")[0].disabled = true;
+        document.getElementsByName("marcar6")[0].disabled = true;
+        document.getElementsByName("marcar7")[0].disabled = true;
+        document.getElementsByName("marcar8")[0].disabled = true;
+      });
+
+      document.getElementsByName("marcar10")[0].addEventListener("click", function() {
+        document.getElementsByName("marcar")[0].disabled = true;
+        document.getElementsByName("marcar2")[0].disabled = true;
+        document.getElementsByName("marcar3")[0].disabled = true;
+        document.getElementsByName("marcar4")[0].disabled = true;
+        document.getElementsByName("marcar5")[0].disabled = true;
+        document.getElementsByName("marcar6")[0].disabled = true;
+        document.getElementsByName("marcar7")[0].disabled = true;
+        document.getElementsByName("marcar8")[0].disabled = true;
+        document.getElementsByName("marcar9")[0].disabled = true;
+        document.getElementsByName("marcar11")[0].disabled = true;
+        document.getElementsByName("marcar12")[0].disabled = true;
+      });
+
+
+      document.getElementsByName("marcar11")[0].addEventListener("click", function() {
+        document.getElementsByName("marcar")[0].disabled = true;
+        document.getElementsByName("marcar2")[0].disabled = true;
+        document.getElementsByName("marcar3")[0].disabled = true;
+        document.getElementsByName("marcar4")[0].disabled = true;
+        document.getElementsByName("marcar5")[0].disabled = true;
+        document.getElementsByName("marcar6")[0].disabled = true
+        document.getElementsByName("marcar7")[0].disabled = true;
+        document.getElementsByName("marcar8")[0].disabled = true;
+        document.getElementsByName("marcar9")[0].disabled = true;
+        document.getElementsByName("marcar10")[0].disabled = true;
+        document.getElementsByName("marcar12")[0].disabled = true;
+      });
+
+      document.getElementsByName("marcar12")[0].addEventListener("click", function() {
+        document.getElementsByName("marcar")[0].disabled = true;
+        document.getElementsByName("marcar2")[0].disabled = true;
+        document.getElementsByName("marcar3")[0].disabled = true;
+        document.getElementsByName("marcar4")[0].disabled = true;
+        document.getElementsByName("marcar5")[0].disabled = true;
+        document.getElementsByName("marcar6")[0].disabled = true;
+        document.getElementsByName("marcar7")[0].disabled = true;
+        document.getElementsByName("marcar8")[0].disabled = true;
+        document.getElementsByName("marcar9")[0].disabled = true;
+        document.getElementsByName("marcar10")[0].disabled = true;
+        document.getElementsByName("marcar11")[0].disabled = true;
+      });
+
+      document.getElementsByName("marcar13")[0].addEventListener("click", function() {
+        document.getElementsByName("marcar")[0].disabled = true;
+        document.getElementsByName("marcar2")[0].disabled = true;
+        document.getElementsByName("marcar3")[0].disabled = true;
+        document.getElementsByName("marcar4")[0].disabled = true;
+        document.getElementsByName("marcar5")[0].disabled = true;
+        document.getElementsByName("marcar6")[0].disabled = true;
+        document.getElementsByName("marcar7")[0].disabled = true;
+        document.getElementsByName("marcar8")[0].disabled = true;
+        document.getElementsByName("marcar9")[0].disabled = true;
+        document.getElementsByName("marcar10")[0].disabled = true;
+        document.getElementsByName("marcar11")[0].disabled = true;
+        document.getElementsByName("marcar12")[0].disabled = true;
+        document.getElementsByName("marcar14")[0].disabled = true;
+        document.getElementsByName("marcar15")[0].disabled = true;
+      });
+
+      document.getElementsByName("marcar14")[0].addEventListener("click", function() {
+        document.getElementsByName("marcar")[0].disabled = true;
+        document.getElementsByName("marcar2")[0].disabled = true;
+        document.getElementsByName("marcar3")[0].disabled = true;
+        document.getElementsByName("marcar4")[0].disabled = true;
+        document.getElementsByName("marcar5")[0].disabled = true;
+        document.getElementsByName("marcar6")[0].disabled = true;
+        document.getElementsByName("marcar7")[0].disabled = true;
+        document.getElementsByName("marcar8")[0].disabled = true;
+        document.getElementsByName("marcar9")[0].disabled = true;
+        document.getElementsByName("marcar10")[0].disabled = true;
+        document.getElementsByName("marcar11")[0].disabled = true;
+        document.getElementsByName("marcar12")[0].disabled = true;
+        document.getElementsByName("marcar13")[0].disabled = true;
+        document.getElementsByName("marcar15")[0].disabled = true;
+
+      });
+
+      document.getElementsByName("marcar15")[0].addEventListener("click", function() {
+        document.getElementsByName("marcar")[0].disabled = true;
+        document.getElementsByName("marcar2")[0].disabled = true;
+        document.getElementsByName("marcar3")[0].disabled = true;
+        document.getElementsByName("marcar4")[0].disabled = true;
+        document.getElementsByName("marcar5")[0].disabled = true;
+        document.getElementsByName("marcar6")[0].disabled = true;
+        document.getElementsByName("marcar7")[0].disabled = true;
+        document.getElementsByName("marcar8")[0].disabled = true;
+        document.getElementsByName("marcar9")[0].disabled = true;
+        document.getElementsByName("marcar10")[0].disabled = true;
+        document.getElementsByName("marcar11")[0].disabled = true;
+        document.getElementsByName("marcar12")[0].disabled = true;
+        document.getElementsByName("marcar13")[0].disabled = true;
+        document.getElementsByName("marcar14")[0].disabled = true;
+      });
+    </script>
+
+    <!--Option 2: Separate Popper and Bootstrap JS
+
+
+    -->
+</body>
+
+</html>
